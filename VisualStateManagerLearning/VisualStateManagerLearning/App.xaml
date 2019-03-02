@@ -55,6 +55,11 @@
                 <Setter Property="HeightRequest"
                         Value="55" />
             </Style>
+            <!-- Setting implicit OnColor for Switch controls -->
+            <Style TargetType="Switch">
+                <Setter Property="OnColor"
+                        Value="#76D572" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>
