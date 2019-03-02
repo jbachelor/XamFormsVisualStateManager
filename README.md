@@ -1,4 +1,4 @@
-# XamFormsVisualStateManager
+# Xamarin.Forms Visual State Manager
 This is a small demo app to show how to use the [VisualStateManager](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/visual-state-manager) in Xamarin.Forms to control the look of controls depending on the value of their [IsEnabled](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.visualelement.isenabled?view=xamarin-forms) property. This is just the tip of the VisualStateManager iceberg, but it's a great place to start.
 
 ## Why is this sample here?
