@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
+                        x:Class="VisualStateManagerLearning.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- orangeButton style without using the VisualStateManager -->
+            <Style x:Key="orangeButtonNoVSM"
+                   TargetType="Button">
+                <Setter Property="BackgroundColor"
+                        Value="#ee7623" />
+                <Setter Property="TextColor"
+                        Value="White" />
+                <Setter Property="BorderColor"
+                        Value="Transparent" />
+                <Setter Property="BorderRadius"
+                        Value="0" />
+                <Setter Property="FontSize"
+                        Value="24" />
+                <Setter Property="HeightRequest"
+                        Value="55" />
+            </Style>
+            <!-- orangeButton style using the VisualStateManager -->
+            <Style x:Key="orangeButtonWithVSM"
+                   TargetType="Button">
+                <!-- Use the VisualStateManager to set UI properties that should change based on IsEnabled property -->
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                            Value="#ee7623" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                            Value="LightGray" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+                <!-- The rest of the button properties are the same regardless of state: -->
+                <Setter Property="TextColor"
+                        Value="White" />
+                <Setter Property="BorderColor"
+                        Value="Transparent" />
+                <Setter Property="BorderRadius"
+                        Value="0" />
+                <Setter Property="FontSize"
+                        Value="24" />
+                <Setter Property="HeightRequest"
+                        Value="55" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>
