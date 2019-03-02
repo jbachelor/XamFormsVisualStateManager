@@ -3,6 +3,7 @@ using Prism.Mvvm;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace VisualStateManagerLearning.ViewModels
@@ -20,27 +21,28 @@ namespace VisualStateManagerLearning.ViewModels
 
         public ViewModelBase(INavigationService navigationService)
         {
+            Debug.WriteLine($"**** {this.GetType().Name}:  ctor");
             NavigationService = navigationService;
         }
 
         public virtual void OnNavigatedFrom(INavigationParameters parameters)
         {
-
+            Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnNavigatedFrom)}");
         }
 
         public virtual void OnNavigatedTo(INavigationParameters parameters)
         {
-
+            Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnNavigatedTo)}");
         }
 
         public virtual void OnNavigatingTo(INavigationParameters parameters)
         {
-
+            Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnNavigatingTo)}");
         }
 
         public virtual void Destroy()
         {
-
+            Debug.WriteLine($"**** {this.GetType().Name}.{nameof(Destroy)}");
         }
     }
 }
