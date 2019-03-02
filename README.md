@@ -10,6 +10,11 @@ It was not too long ago when I thought I had almost no control at all over how v
 
 Furthermore, I am a huge fan of the the [Prism MVVM framework](https://prismlibrary.github.io/) in conjunction with Xamarin.Forms, and I believe the more sample code available the better! This demo app will show you how to customize the look of a styled button when it is disabled, in a very simple Xamarin.Forms app using the Prism MVVM framework.
 
+**Quick Note**:  You might notice the switch control is slightly customized, since I strongly dislike the default pink color used on the Android switch by default:
+* There is an implicit style set for the switch OnColor in App.xaml.cs (in the cross-platform project). 
+* The value for "colorAccent" in the Android project's styles.xml file has been changed to be not pink.
+* You can view the actual code changes in [this commit](https://github.com/jbachelor/XamFormsVisualStateManager/commit/2fed5c837e5ce4b34547f28c84f9b856554b5adf).
+
 ***
 ## Keep an eye on your ApplicationOutput pad/tab
 There are Debug.WriteLine calls throughout the sample code to illustrate app flow, show you when the buttons are responding to taps, etc.
