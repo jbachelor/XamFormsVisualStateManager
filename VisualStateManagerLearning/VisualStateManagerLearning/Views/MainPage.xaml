@@ -7,10 +7,12 @@
                  Spacing="20">
         <Button Style="{StaticResource orangeButtonNoVSM}"
                 Text="{Binding NoVSMButtonText}"
-                IsEnabled="{Binding ShouldEnableButtons}" />
+                IsEnabled="{Binding ShouldEnableButtons}"
+                Command="{Binding NoVsmButtonTappedCommand}" />
         <Button Style="{StaticResource orangeButtonWithVSM}"
                 Text="{Binding VSMButtonText}"
-                IsEnabled="{Binding ShouldEnableButtons}" />
+                IsEnabled="{Binding ShouldEnableButtons}"
+                Command="{Binding VsmButtonTappedCommand}" />
         <StackLayout Orientation="Horizontal"
                      Padding="0,20,0,0"
                      Spacing="20">
